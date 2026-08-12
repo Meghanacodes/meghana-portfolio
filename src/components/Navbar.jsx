@@ -26,7 +26,7 @@ function Navbar() {
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#tictactoe">Tic-Tac-Toe</a>
+       <a href="#playground">Playground</a>
         <a href="#contact">Contact</a>
       </div>
 
@@ -52,7 +52,7 @@ function Navbar() {
           <a href="#skills" onClick={closeMenu}>Skills</a>
           <a href="#experience" onClick={closeMenu}>Experience</a>
           <a href="#projects" onClick={closeMenu}>Projects</a>
-          <a href="#tictactoe" onClick={closeMenu}>Tic-Tac-Toe</a>
+          <a href="#playground" onClick={closeMenu}>Playground</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
         </div>
       )}

@@ -8,6 +8,7 @@
   import Education from "./components/Education";
   import Contact from "./components/Contact";
   import "./App.css";
+import ApiExplorer from "./components/ApiExplorer";
 
   function App() {
     return (
@@ -18,7 +19,27 @@
         <Skills />
         <Experience />
         <Projects />
-        <TicTacToe />
+        <Projects />
+<section id="playground" className="playground">
+
+  <div className="playground-heading">
+    <p className="section-label">FOR FUN</p>
+
+    <h2>
+      MEGHANA'S <span>PLAYGROUND</span>
+    </h2>
+
+    <p>
+      Take a break from hiring me. Beat me instead. 😄
+    </p>
+  </div>
+
+  <div className="playground-grid">
+    <TicTacToe />
+    <ApiExplorer />
+  </div>
+
+</section>
         <Education />
         <Contact />
       </>
