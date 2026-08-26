@@ -11,6 +11,9 @@ function TicTacToe() {
   const [currentPlayer, setPlayer] = useState("X");
   const [winner, setWinner] = useState(null);
   const [computerThinking, setComputerThinking] = useState(false);
+  const [nameInput, setNameInput] = useState("");
+  const [playerName, setPlayerName] = useState("");
+  const [gameNumber, setGameNumber] = useState(1);
 
 
   const winningCommbination = [
@@ -72,6 +75,12 @@ function TicTacToe() {
       return;
     }
 
+    // Make every alternate game forgiving without exposing difficulty in the UI.
+    if (gameNumber % 2 === 0) {
+      return availableMoves[
+        Math.floor(Math.random() * availableMoves.length)
+      ];
+    }
 
     // 1. Try to win
     for (const move of availableMoves) {
@@ -235,13 +244,58 @@ function TicTacToe() {
     setWinner(null);
 
     setComputerThinking(false);
+
+    setGameNumber((currentGame) => currentGame + 1);
   };
+
+  const startGame = (event) => {
+    event.preventDefault();
+
+    const trimmedName = nameInput.trim();
+
+    if (trimmedName) {
+      setPlayerName(trimmedName);
+    }
+  };
+
+  if (!playerName) {
+    return (
+      <section id="tictactoe" className="game-welcome">
+        <p className="game-welcome-label">TIC TAC TOE</p>
+        <h1>Ready to play?</h1>
+        <p className="game-subtitle">Tell Meghana Bot who it is playing against.</p>
+
+        <form className="game-name-form" onSubmit={startGame}>
+          <label htmlFor="player-name">Your name</label>
+          <input
+            id="player-name"
+            type="text"
+            value={nameInput}
+            onChange={(event) => setNameInput(event.target.value)}
+            placeholder="Enter your name"
+            maxLength={30}
+            autoFocus
+            required
+          />
+          <button type="submit" className="reset-game">Start Game</button>
+        </form>
+      </section>
+    );
+  }
 
 
   return (
+     <>
+    {winner && winner !== "Draw" && (
+      <div className="confetti">
+        {Array.from({ length: 40 }).map((_, index) => (
+          <span key={index}></span>
+        ))}
+      </div>
+    )}
     <section id="tictactoe">
 
-      <h1>You vs Meghana </h1>
+      <h1>{playerName} vs Meghana</h1>
 
       <p className="game-subtitle">
         Can you beat my bot? 🤖
@@ -306,6 +360,7 @@ function TicTacToe() {
       </button>
 
     </section>
+    </>
   );
 }
 

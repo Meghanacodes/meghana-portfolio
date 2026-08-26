@@ -2250,6 +2250,57 @@
   margin-bottom: 40px;
 }
 
+.game-welcome {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.game-welcome-label {
+  color: #a855f7;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.game-welcome h1 {
+  margin-bottom: 14px !important;
+}
+
+.game-name-form {
+  display: grid;
+  gap: 12px;
+  margin: 30px auto 0;
+  max-width: 320px;
+  text-align: left;
+}
+
+.game-name-form label {
+  color: #c4b5fd;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.game-name-form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #302044;
+  border-radius: 12px;
+  outline: none;
+  background: #0a0810;
+  color: #f5f3ff;
+  font: inherit;
+}
+
+.game-name-form input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.18);
+}
+
+.game-name-form .reset-game {
+  justify-self: center;
+}
+
 .game-board {
   width: 330px;
   margin: 0 auto;
@@ -2323,16 +2374,23 @@
   box-shadow:
     0 8px 25px rgba(139, 92, 246, 0.3);
 }
+/* =========================================================
+   CONFETTI
+========================================================= */
+
 .confetti {
   position: fixed;
 
   inset: 0;
 
-  pointer-events: none;
-
-  z-index: 9999;
+  width: 100%;
+  height: 100%;
 
   overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 99999;
 }
 
 .confetti span {
@@ -2343,101 +2401,80 @@
   width: 8px;
   height: 14px;
 
+  border-radius: 2px;
+
   background: #a855f7;
 
-  animation: confetti-fall 2.5s linear forwards;
+  animation: confetti-fall 2.8s linear forwards;
 }
 
-/* Different positions and colors */
+
+/* Different colors */
 
 .confetti span:nth-child(3n) {
-  background: #c4b5fd;
-}
-
-.confetti span:nth-child(4n) {
   background: #8b5cf6;
 }
 
+.confetti span:nth-child(4n) {
+  background: #c4b5fd;
+}
+
 .confetti span:nth-child(5n) {
+  background: #ec4899;
+}
+
+.confetti span:nth-child(7n) {
   background: #f5f3ff;
 }
 
-/* Different starting positions */
 
-.confetti span:nth-child(1) { left: 5%; animation-delay: 0s; }
-.confetti span:nth-child(2) { left: 10%; animation-delay: .2s; }
-.confetti span:nth-child(3) { left: 15%; animation-delay: .1s; }
-.confetti span:nth-child(4) { left: 20%; animation-delay: .4s; }
-.confetti span:nth-child(5) { left: 25%; animation-delay: .15s; }
-.confetti span:nth-child(6) { left: 30%; animation-delay: .3s; }
-.confetti span:nth-child(7) { left: 35%; animation-delay: .05s; }
-.confetti span:nth-child(8) { left: 40%; animation-delay: .25s; }
-.confetti span:nth-child(9) { left: 45%; animation-delay: .1s; }
-.confetti span:nth-child(10) { left: 50%; animation-delay: .35s; }
-.confetti span:nth-child(11) { left: 55%; animation-delay: .15s; }
-.confetti span:nth-child(12) { left: 60%; animation-delay: .3s; }
-.confetti span:nth-child(13) { left: 65%; animation-delay: .05s; }
-.confetti span:nth-child(14) { left: 70%; animation-delay: .25s; }
-.confetti span:nth-child(15) { left: 75%; animation-delay: .1s; }
-.confetti span:nth-child(16) { left: 80%; animation-delay: .4s; }
-.confetti span:nth-child(17) { left: 85%; animation-delay: .2s; }
-.confetti span:nth-child(18) { left: 90%; animation-delay: .35s; }
-.confetti span:nth-child(19) { left: 95%; animation-delay: .1s; }
+/* Different positions */
 
-.confetti span:nth-child(20) {
-  left: 12%;
-  animation-delay: .45s;
-}
+.confetti span:nth-child(1) { left: 3%; animation-delay: 0s; }
+.confetti span:nth-child(2) { left: 7%; animation-delay: .15s; }
+.confetti span:nth-child(3) { left: 11%; animation-delay: .3s; }
+.confetti span:nth-child(4) { left: 15%; animation-delay: .05s; }
+.confetti span:nth-child(5) { left: 19%; animation-delay: .2s; }
+.confetti span:nth-child(6) { left: 23%; animation-delay: .4s; }
+.confetti span:nth-child(7) { left: 27%; animation-delay: .1s; }
+.confetti span:nth-child(8) { left: 31%; animation-delay: .35s; }
+.confetti span:nth-child(9) { left: 35%; animation-delay: .15s; }
+.confetti span:nth-child(10) { left: 39%; animation-delay: .45s; }
 
-.confetti span:nth-child(21) {
-  left: 28%;
-  animation-delay: .35s;
-}
+.confetti span:nth-child(11) { left: 43%; animation-delay: .2s; }
+.confetti span:nth-child(12) { left: 47%; animation-delay: .05s; }
+.confetti span:nth-child(13) { left: 51%; animation-delay: .3s; }
+.confetti span:nth-child(14) { left: 55%; animation-delay: .1s; }
+.confetti span:nth-child(15) { left: 59%; animation-delay: .4s; }
+.confetti span:nth-child(16) { left: 63%; animation-delay: .2s; }
+.confetti span:nth-child(17) { left: 67%; animation-delay: .5s; }
+.confetti span:nth-child(18) { left: 71%; animation-delay: .15s; }
+.confetti span:nth-child(19) { left: 75%; animation-delay: .35s; }
+.confetti span:nth-child(20) { left: 79%; animation-delay: .05s; }
 
-.confetti span:nth-child(22) {
-  left: 42%;
-  animation-delay: .5s;
-}
+.confetti span:nth-child(21) { left: 83%; animation-delay: .25s; }
+.confetti span:nth-child(22) { left: 87%; animation-delay: .45s; }
+.confetti span:nth-child(23) { left: 91%; animation-delay: .1s; }
+.confetti span:nth-child(24) { left: 95%; animation-delay: .3s; }
 
-.confetti span:nth-child(23) {
-  left: 58%;
-  animation-delay: .25s;
-}
+.confetti span:nth-child(25) { left: 8%; animation-delay: .5s; }
+.confetti span:nth-child(26) { left: 18%; animation-delay: .35s; }
+.confetti span:nth-child(27) { left: 28%; animation-delay: .55s; }
+.confetti span:nth-child(28) { left: 38%; animation-delay: .4s; }
+.confetti span:nth-child(29) { left: 48%; animation-delay: .6s; }
+.confetti span:nth-child(30) { left: 58%; animation-delay: .45s; }
 
-.confetti span:nth-child(24) {
-  left: 72%;
-  animation-delay: .45s;
-}
+.confetti span:nth-child(31) { left: 68%; animation-delay: .55s; }
+.confetti span:nth-child(32) { left: 78%; animation-delay: .35s; }
+.confetti span:nth-child(33) { left: 88%; animation-delay: .6s; }
+.confetti span:nth-child(34) { left: 98%; animation-delay: .4s; }
 
-.confetti span:nth-child(25) {
-  left: 88%;
-  animation-delay: .3s;
-}
-
-.confetti span:nth-child(26) {
-  left: 18%;
-  animation-delay: .55s;
-}
-
-.confetti span:nth-child(27) {
-  left: 38%;
-  animation-delay: .4s;
-}
-
-.confetti span:nth-child(28) {
-  left: 68%;
-  animation-delay: .55s;
-}
-
-.confetti span:nth-child(29) {
-  left: 82%;
-  animation-delay: .5s;
-}
-
-.confetti span:nth-child(30) {
-  left: 52%;
-  animation-delay: .6s;
-}
+.confetti span:nth-child(35) { left: 13%; animation-delay: .7s; }
+.confetti span:nth-child(36) { left: 33%; animation-delay: .65s; }
+.confetti span:nth-child(37) { left: 53%; animation-delay: .75s; }
+.confetti span:nth-child(38) { left: 73%; animation-delay: .6s; }
+.confetti span:nth-child(39) { left: 93%; animation-delay: .7s; }
+.confetti span:nth-child(40) { left: 43%; animation-delay: .8s; }
 
 
 @keyframes confetti-fall {
@@ -2452,7 +2489,7 @@
 
   100% {
     transform:
-      translateY(100vh)
+      translateY(110vh)
       rotate(720deg);
 
     opacity: 0;
