@@ -74,6 +74,26 @@ const projects = [
       "REST APIs"
     ],
     color: "purple"
+  },  
+  {
+    number: "05",
+    category: "FULL-STACK SAAS",
+    title: "TechFlow",
+    subtitle: "Technician Assignment Dashboard",
+    description:
+      "Built a full-stack dashboard to manage technician assignments, track job statuses, and streamline service operations with persistent database storage.",
+    details:
+      "Implemented GET, POST, and PATCH REST API endpoints using Next.js Route Handlers and Supabase PostgreSQL. Added job search and filtering, form validation with React Hook Form and Zod, loading skeletons, error handling, and optimistic status updates with rollback using TanStack Query.",
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "PostgreSQL",
+      "TanStack Query"
+    ],
+    color: "blue"
   }
 ];
 
