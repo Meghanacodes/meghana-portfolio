@@ -55,26 +55,7 @@ const projects = [
       "REST APIs"
     ],
     color: "pink"
-  },
-
-  {
-    number: "04",
-    category: "PERSONAL PROJECT",
-    title: "CareerFlow",
-    subtitle: "Job Application Management Platform",
-    description:
-      "A full-stack platform designed to help job seekers organize applications, interviews, companies and career progress in one place.",
-    details:
-      "Planned as a complete product with authentication, application tracking, Kanban workflow, search, filters and analytics.",
-    technologies: [
-      "React.js",
-      "Node.js",
-      "MongoDB",
-      "JWT",
-      "REST APIs"
-    ],
-    color: "purple"
-  },  
+  }, 
   {
     number: "05",
     category: "FULL-STACK SAAS",

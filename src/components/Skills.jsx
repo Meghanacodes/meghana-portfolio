@@ -8,26 +8,33 @@ import {
   Layers
 } from "lucide-react";
 
+
 const skillGroups = [
   {
     title: "Frontend",
     icon: <Code2 />,
     skills: [
-      "React",
+      "React.js",
       "Angular",
+      "Next.js",
       "JavaScript",
       "TypeScript",
-      "HTML",
-      "CSS"
+      "HTML5",
+      "CSS3",
+      "SCSS",
+      "Tailwind CSS",
+      "Bootstrap"
     ]
   },
   {
-    title: "Backend",
+    title: "Backend & APIs",
     icon: <Server />,
     skills: [
       "Node.js",
+      "Express.js",
       "REST APIs",
-      "LoopBack",
+      "Next.js Route Handlers",
+      "LoopBack 4",
       "JWT"
     ]
   },
@@ -35,8 +42,11 @@ const skillGroups = [
     title: "Database",
     icon: <Database />,
     skills: [
+      "PostgreSQL",
+      "Supabase",
       "MongoDB",
-      "MySQL"
+      "MySQL",
+      "SQL"
     ]
   },
   {
@@ -44,13 +54,20 @@ const skillGroups = [
     icon: <Wrench />,
     skills: [
       "Git",
+      "GitHub",
+      "TanStack Query",
+      "React Hook Form",
+      "Zod",
       "RxJS",
-      "NGRX",
+      "NgRx",
+      "Zustand",
       "Angular Material",
-      "Shopify"
+      "Shopify",
+      "Vercel"
     ]
   }
 ];
+
 
 function Skills() {
   return (
