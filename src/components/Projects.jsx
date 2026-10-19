@@ -43,10 +43,10 @@ const projects = [
   {
     number: "03",
     category: "HEALTH TECH",
-    title: "Technician Assignment",
-    subtitle: "Auto Technician Assignment System",
+    title: "Billing Dashboard",
+    subtitle: "Billing Management System",
     description:
-      "Developed and integrated an Auto Technician Assignment System and improved the Doctor Visit Workflow.",
+      "Developed and integrated a comprehensive billing management system with real-time reporting and analytics.",
     details:
       "Built and optimized REST APIs, improving query handling and restructuring backend logic for better performance.",
     technologies: [
